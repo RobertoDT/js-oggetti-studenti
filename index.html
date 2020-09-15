@@ -11,17 +11,18 @@
   <body>
 
     <div class="prova">
-      <h1>Lista Studenti</h1>
+
     </div>
 
     <!-- TEMPLATE -->
     <script id="students" type="text/x-handlebars-template">
 
     <div class="entry">
-      <div class="body ">
+      <div class="body">
+        <p class="{{classe}}">Lista Studenti</p>
         <ul class="people_list">
           {{#each listaStudenti}}
-          <li>{{this}}</li>
+          <li>{{this.nome}} {{this.cognome}} {{this.eta}}</li>
           {{/each}}
         </ul>
       </div>
