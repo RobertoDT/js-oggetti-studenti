@@ -19,7 +19,11 @@
 
     <div class="entry">
       <div class="body ">
-        <li>{{text}}</li>
+        <ul class="people_list">
+          {{#each listaStudenti}}
+          <li>{{this}}</li>
+          {{/each}}
+        </ul>
       </div>
     </div>
 

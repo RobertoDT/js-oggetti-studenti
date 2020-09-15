@@ -70,9 +70,7 @@ $(document).ready(function(){
 
   var context = {
     "title" : "Lista studenti",
-    "text" : listaStudenti[0]["nome"]
-
-
+    "listaStudenti" : listaStudenti
   };
 
   var html = template(context);
