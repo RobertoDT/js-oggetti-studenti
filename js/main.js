@@ -50,19 +50,35 @@ $(document).ready(function(){
   }
 
   //chiedo 3 prompt all'utente (nome, cognome, età) ed aggiungo un nuovo oggetto
-  var nome = prompt("Inserisci un nome");
-  var cognome = prompt("inserisci un cognome");
-  var anni = parseInt(prompt("Inserisci un numero per l'età"));
+  // var nome = prompt("Inserisci un nome");
+  // var cognome = prompt("inserisci un cognome");
+  // var anni = parseInt(prompt("Inserisci un numero per l'età"));
+  //
+  // var nuovoStudente = {
+  //   "firstName" : nome,
+  //   "lastName" : cognome,
+  //   "age" : anni
+  // }
+  //
+  // listaStudenti.push(nuovoStudente);
+  //
+  // console.log(listaStudenti);
 
-  var nuovoStudente = {
-    "firstName" : nome,
-    "lastName" : cognome,
-    "age" : anni
-  }
+  var source = $("#students").html();
+  var template = Handlebars.compile(source);
 
-  listaStudenti.push(nuovoStudente);
 
-  console.log(listaStudenti);
+  var context = {
+    "title" : "Lista studenti",
+    "text" : listaStudenti[0]["nome"]
+
+
+  };
+
+  var html = template(context);
+
+  // html e template compilato appeso al mio div prova
+  $(".prova").append(html);
 
 
 });

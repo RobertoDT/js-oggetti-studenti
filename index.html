@@ -2,12 +2,30 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <!-- HANDLEBARS -->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>Studenti</title>
   </head>
   <body>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <div class="prova">
+      <h1>Lista Studenti</h1>
+    </div>
+
+    <!-- TEMPLATE -->
+    <script id="students" type="text/x-handlebars-template">
+
+    <div class="entry">
+      <div class="body ">
+        <li>{{text}}</li>
+      </div>
+    </div>
+
+  </script>
+  <!-- /TEMPLATE -->
+
   <script src="js/main.js" charset="utf-8"></script>
   </body>
 </html>
